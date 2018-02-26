@@ -1,17 +1,17 @@
 public class App {
-    public static void main(String[] args) {
+    public static void main(String args[]) {
+        Stack stack = new Stack();
 
-        MyPriorityQue que = new MyPriorityQue();
+        stack.push(new Item("a"));
+        System.out.println(stack.toString());
 
-        que.enqueue("foo", 3);
-        que.enqueue("bar", 2);
-        que.enqueue("car", 5);
-        que.enqueue("far", 8);
-        que.enqueue("dar", 1);
-        que.enqueue("x", 4);
+        stack.push(new Item("b"));
+        System.out.println(stack.toString());
 
-        System.out.println(que.dequeue());
+        stack.push(new Item("c"));
+        System.out.println(stack.toString());
 
-
+        stack.pop();
+        System.out.println(stack.toString());
     }
 }
